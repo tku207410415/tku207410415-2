@@ -14,7 +14,7 @@ console.log(val);
 
 // Append
 val = 'david ';
-val += 'liao';
+val = 'liao';
 console.log(val);
 
 val = 'Hello, my name is ' + firstName + ' and I am ' + age;
