@@ -53,7 +53,8 @@ $(document).ready(function(){
             turn++;
             if($.fn.checkWin('o')){
                 alert('Winner: o');
-                turn==0;
+                $.fn.reset();
+                turn = 0;
             }
         }else if(turn%2==1){
             $(this).text(x);
@@ -61,12 +62,13 @@ $(document).ready(function(){
             turn++;
             if($.fn.checkWin('x')){
                 alert('Winner: x');
-                turn==0;
+                $.fn.reset();
+                turn = 0;
             }
             }
         
            if(turn==9){
-               alert('Tie Game');
+               alert('filled');
                $.fn.reset();
            } 
     });
