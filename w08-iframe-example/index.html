@@ -6,11 +6,21 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="css/pet.css">
     <script>
-        function goPage(index){
+        function goPage(index) {
             let p = document.querySelector('.consection');
-            switch(index){
+            switch (index) {
+                case 1:
+                    p.innerHTML = '<iframe width="100%" height="700" src="index.html" frameborder=0></iframe>';
+                    break;
                 case 2:
-                p.innerHTML = '<iframe width="100%" height="700" src="p1/div.html" frameborder=0></iframe>'
+                    p.innerHTML = '<iframe width="100%" height="700" src="p1/div.html" frameborder=0></iframe>';
+                    break;
+                case 3:
+                    p.innerHTML = '<iframe width="100%" height="700" src="movie.html" frameborder=0></iframe>';
+                    break;
+                case 4:
+                    p.innerHTML = '<iframe width="100%" height="700" src="music.html" frameborder=0></iframe>';
+                    break;
             }
         }
     </script>
@@ -25,11 +35,11 @@
         <aside>
             <nav>
                 <ul>
-                    <li><a href="index.html">最新消息</a></li>
+                    <li><a onclick="goPage(1)">最新消息</a></li>
                     <li><a onclick="goPage(2)">Div demo</a></li>
-                    <li><a href="movie.html">短片欣賞</a></li>
-                    <li><a href="music.html">音樂欣賞</a></li>
-                    
+                    <li><a onclick="goPage(3)">短片欣賞</a></li>
+                    <li><a onclick="goPage(4)">音樂欣賞</a></li>
+
                 </ul>
             </nav>
         </aside>
