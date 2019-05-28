@@ -1,9 +1,9 @@
-class UI{
-    constructor(){
+class UI {
+    constructor() {
         this.profile = document.getElementById('profile');
     }
-    showProfile(user){
-        this.profile.innerHTML=`
+    showProfile(user) {
+        this.profile.innerHTML = `
         <div class="card card-body">
         <div class="row">
           <div class="col-md-3">
@@ -17,8 +17,11 @@ class UI{
             <span class="badge badge-success">Followers:${user.followers}</span>
             <span class="badge badge-info">Following:${user.following}</span>
 
-            <ul class="list-group">
-            
+            <ul class="list-group mt-2">
+                <li class="list-group-item"> Company : ${user.company} </li>
+                <li class="list-group-item"> Website/Blog : ${user.blog} </li>
+                <li class="list-group-item"> Location : ${user.location} </li>
+                <li class="list-group-item"> Member Since : ${user.created_at} </li>
             </ul>
           </div>
 
@@ -27,12 +30,11 @@ class UI{
         `;
     }
 
-    showRepos(repos){
+    showRepos(repos) {
 
     }
 
-    clearProfile(){
+    clearProfile() {
         this.profile.innerHTML = '';
     }
 }
-
